@@ -8,10 +8,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-secondary rounded-lg flex items-center justify-center">
-                <span className="text-secondary-foreground font-bold">AK</span>
-              </div>
+            <div className="flex items-center space-x-3">
+              <img 
+                src="/lovable-uploads/ceae51e0-b7c2-44e5-bb98-1e5873971b19.png" 
+                alt="Arun Kabeli Power Limited Logo" 
+                className="w-10 h-10 object-contain"
+              />
               <div>
                 <h3 className="font-bold text-lg">Arun Kabeli Power</h3>
                 <p className="text-sm opacity-90">Limited</p>

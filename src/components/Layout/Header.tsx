@@ -23,10 +23,12 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-lg">AK</span>
-            </div>
+          <Link to="/" className="flex items-center space-x-3">
+            <img 
+              src="/lovable-uploads/ceae51e0-b7c2-44e5-bb98-1e5873971b19.png" 
+              alt="Arun Kabeli Power Limited Logo" 
+              className="w-12 h-12 object-contain"
+            />
             <div className="hidden sm:block">
               <span className="font-bold text-lg text-foreground">Arun Kabeli Power</span>
               <p className="text-sm text-muted-foreground">Limited</p>

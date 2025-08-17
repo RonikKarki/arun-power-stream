@@ -16,21 +16,21 @@
     --popover: 0 0% 100%;
     --popover-foreground: 210 30% 8%;
 
-    /* Primary - Deep Blue (Water/Energy) */
-    --primary: 210 85% 25%;
+    /* Primary - Orange/Red (Brand Color from Logo) */
+    --primary: 15 85% 55%;
     --primary-foreground: 0 0% 98%;
-    --primary-light: 210 75% 45%;
-    --primary-dark: 210 90% 15%;
+    --primary-light: 15 75% 65%;
+    --primary-dark: 15 90% 45%;
 
-    /* Secondary - Teal (Water Flow) */
-    --secondary: 180 65% 35%;
+    /* Secondary - Blue (Water from Logo) */
+    --secondary: 195 85% 45%;
     --secondary-foreground: 0 0% 98%;
-    --secondary-light: 180 55% 55%;
+    --secondary-light: 195 75% 65%;
 
-    /* Accent - Green (Renewable Energy) */
-    --accent: 150 60% 30%;
+    /* Accent - Teal (Water Flow) */
+    --accent: 185 70% 40%;
     --accent-foreground: 0 0% 98%;
-    --accent-light: 150 50% 50%;
+    --accent-light: 185 60% 60%;
 
     /* Neutral Colors */
     --muted: 210 20% 96%;

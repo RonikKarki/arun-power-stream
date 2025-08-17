@@ -56,8 +56,8 @@ const CompanyOverview = () => {
               <Card className="overflow-hidden group">
                 <div className="relative">
                   <img 
-                    src={powerPlant} 
-                    alt="Modern Hydropower Plant" 
+                    src="/lovable-uploads/0e2a4784-fb2a-4edc-96d1-5e2aac24f970.png" 
+                    alt="Arun Kabeli Powerhouse Facility"
                     className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent" />
@@ -87,8 +87,8 @@ const CompanyOverview = () => {
               <Card className="overflow-hidden group">
                 <div className="relative">
                   <img 
-                    src={riverLandscape} 
-                    alt="Pristine River Landscape" 
+                    src="/lovable-uploads/2a455b33-0392-4bb9-b989-aa31645d7830.png" 
+                    alt="Water Conveyance Infrastructure"
                     className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-accent/60 to-transparent" />

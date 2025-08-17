@@ -8,24 +8,31 @@ import riverLandscape from "@/assets/river-landscape.jpg";
 const slides = [
   {
     id: 1,
-    image: heroDam,
-    title: "Powering Nepal's Future",
-    subtitle: "Leading the renewable energy revolution through sustainable hydropower generation",
+    image: "/lovable-uploads/27b741df-c255-4090-a87c-36e0ab0a8bad.png",
+    title: "Arun Kabeli Hydropower Project",
+    subtitle: "Advanced dam infrastructure with modern powerhouse facilities for sustainable energy generation",
     cta: "Learn More About Our Projects"
   },
   {
     id: 2,
-    image: powerPlant,
-    title: "Clean Energy Solutions",
-    subtitle: "State-of-the-art hydropower facilities delivering reliable, green electricity",
+    image: "/lovable-uploads/087c3bb9-c5e1-40f3-85a2-0ce076a3f3fa.png",
+    title: "Water Management Excellence",
+    subtitle: "State-of-the-art spillway systems ensuring optimal water flow control and flood management",
     cta: "Explore Our Technology"
   },
   {
     id: 3,
-    image: riverLandscape,
+    image: "/lovable-uploads/8a59dc46-886f-4e0a-b4e8-9eabac76f622.png",
     title: "Sustainable Development",
-    subtitle: "Harnessing nature's power while preserving environmental integrity",
+    subtitle: "Robust concrete infrastructure designed for environmental harmony and long-term sustainability",
     cta: "View Our Environmental Impact"
+  },
+  {
+    id: 4,
+    image: "/lovable-uploads/d97e2b3f-2b03-412e-a574-41d41fa66f85.png",
+    title: "Construction Excellence",
+    subtitle: "Modern construction practices with community engagement and local development focus",
+    cta: "See Our Progress"
   }
 ];
 

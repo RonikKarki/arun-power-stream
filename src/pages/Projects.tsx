@@ -11,60 +11,79 @@ import riverLandscape from "@/assets/river-landscape.jpg";
 const projects = [
   {
     id: 1,
-    name: "Arun Kabeli Hydropower Project",
+    name: "Arun Kabeli Run-of-River Project",
     location: "Sankhuwasabha District",
-    capacity: "25 MW",
+    capacity: "10.05 MW",
     status: "Operational",
-    completionDate: "2020-03-15",
-    image: heroDam,
-    description: "Our flagship project featuring state-of-the-art run-of-river technology with minimal environmental impact.",
+    completionDate: "2021-07-23",
+    image: "/lovable-uploads/27b741df-c255-4090-a87c-36e0ab0a8bad.png",
+    description: "Our flagship run-of-river hydropower project featuring advanced dam infrastructure and modern powerhouse facilities.",
     features: [
-      "Run-of-river design with minimal environmental footprint",
-      "Advanced turbine technology for maximum efficiency",
-      "Local community employment and development programs",
+      "Modern spillway and intake system with flood management",
+      "Advanced turbine technology for maximum efficiency", 
+      "Environmental impact mitigation measures",
       "24/7 automated monitoring and control systems",
-      "Fish ladder and environmental protection measures"
+      "Local community development and employment programs"
     ],
-    beneficiaries: "15,000+ households",
-    investment: "USD 35 Million"
+    beneficiaries: "8,000+ households",
+    investment: "USD 25 Million"
   },
   {
     id: 2,
-    name: "Upper Arun Hydropower Facility",
-    location: "Bhojpur District",
-    capacity: "15 MW",
-    status: "Under Construction",
+    name: "Powerhouse Infrastructure Development",
+    location: "Kabeli River Basin",
+    capacity: "Complete facility",
+    status: "Under Construction", 
     completionDate: "2024-12-30",
-    image: powerPlant,
-    description: "An innovative project utilizing cutting-edge sustainable technology for clean energy generation.",
+    image: "/lovable-uploads/d97e2b3f-2b03-412e-a574-41d41fa66f85.png",
+    description: "State-of-the-art powerhouse construction with modern facilities and worker accommodation.",
     features: [
-      "Smart grid integration capabilities",
-      "Remote monitoring and predictive maintenance",
-      "Zero-waste construction methodology",
-      "Community skills development programs",
-      "Biodiversity conservation initiatives"
+      "Advanced electrical equipment installation",
+      "Remote monitoring and predictive maintenance systems",
+      "Worker safety and accommodation facilities",
+      "Environmental compliance and monitoring",
+      "Community engagement and skills development"
     ],
-    beneficiaries: "10,000+ households",
-    investment: "USD 22 Million"
+    beneficiaries: "Construction workforce",
+    investment: "USD 15 Million"
   },
   {
     id: 3,
-    name: "Kabeli River Mini Hydro",
-    location: "Panchthar District",
-    capacity: "8 MW",
-    status: "Planning",
-    completionDate: "2025-08-15",
-    image: riverLandscape,
-    description: "A community-focused mini hydropower project designed to serve rural electrification needs.",
+    name: "Water Management & Dam Infrastructure",
+    location: "Kabeli River",
+    capacity: "Water regulation",
+    status: "Operational",
+    completionDate: "2021-06-15",
+    image: "/lovable-uploads/8a59dc46-886f-4e0a-b4e8-9eabac76f622.png",
+    description: "Robust concrete dam structure designed for optimal water flow control and environmental sustainability.",
     features: [
-      "Community ownership model",
-      "Micro-grid technology for rural areas",
-      "Local capacity building programs",
-      "Sustainable watershed management",
-      "Women's participation in project management"
+      "Reinforced concrete dam with spillway system",
+      "Advanced water flow regulation technology",
+      "Sediment management and fish protection",
+      "Downstream environmental flow maintenance", 
+      "Flood control and water resource management"
     ],
-    beneficiaries: "5,000+ households",
-    investment: "USD 12 Million"
+    beneficiaries: "Downstream communities",
+    investment: "USD 18 Million"
+  },
+  {
+    id: 4,
+    name: "Water Conveyance System",
+    location: "Project corridor",
+    capacity: "Water transport",
+    status: "Operational", 
+    completionDate: "2021-05-10",
+    image: "/lovable-uploads/2a455b33-0392-4bb9-b989-aa31645d7830.png",
+    description: "Efficient water conveyance channel system with concrete lining for optimal water transport.",
+    features: [
+      "Reinforced concrete channel construction",
+      "Optimal gradient design for maximum efficiency",
+      "Minimal water loss through advanced lining",
+      "Easy maintenance access and monitoring",
+      "Environmental integration with natural landscape"
+    ],
+    beneficiaries: "Water system users",
+    investment: "USD 8 Million"
   }
 ];
 

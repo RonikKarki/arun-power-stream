@@ -9,12 +9,14 @@ import riverLandscape from "@/assets/river-landscape.jpg";
 
 const Gallery = () => {
   const galleryItems = [
-    { id: 1, type: "image", src: heroDam, title: "Main Dam Structure", category: "Infrastructure", date: "2024-01-15" },
-    { id: 2, type: "image", src: powerPlant, title: "Power Generation Unit", category: "Technology", date: "2024-01-10" },
-    { id: 3, type: "image", src: riverLandscape, title: "Environmental Harmony", category: "Environment", date: "2024-01-08" },
-    { id: 4, type: "video", src: heroDam, title: "Project Construction Timelapse", category: "Construction", date: "2024-01-05" },
-    { id: 5, type: "image", src: powerPlant, title: "Control Room Operations", category: "Technology", date: "2023-12-20" },
-    { id: 6, type: "image", src: riverLandscape, title: "Community Engagement", category: "Community", date: "2023-12-15" },
+    { id: 1, type: "image", src: "/lovable-uploads/27b741df-c255-4090-a87c-36e0ab0a8bad.png", title: "Arun Kabeli Dam Aerial View", category: "Infrastructure", date: "2021-07-23" },
+    { id: 2, type: "image", src: "/lovable-uploads/8d153f94-15b5-4371-af37-321e83d6f076.png", title: "Concrete Dam Wall Construction", category: "Construction", date: "2021-06-15" },
+    { id: 3, type: "image", src: "/lovable-uploads/2a455b33-0392-4bb9-b989-aa31645d7830.png", title: "Water Conveyance Channel", category: "Infrastructure", date: "2021-05-10" },
+    { id: 4, type: "image", src: "/lovable-uploads/d97e2b3f-2b03-412e-a574-41d41fa66f85.png", title: "Powerhouse Construction Site", category: "Construction", date: "2024-01-15" },
+    { id: 5, type: "image", src: "/lovable-uploads/0e2a4784-fb2a-4edc-96d1-5e2aac24f970.png", title: "Powerhouse Facility", category: "Technology", date: "2024-01-10" },
+    { id: 6, type: "image", src: "/lovable-uploads/50626f6c-f515-4e48-a492-13a811394df4.png", title: "Water Management System", category: "Operations", date: "2023-12-20" },
+    { id: 7, type: "image", src: "/lovable-uploads/8a59dc46-886f-4e0a-b4e8-9eabac76f622.png", title: "Dam Structure Downstream", category: "Infrastructure", date: "2021-07-23" },
+    { id: 8, type: "image", src: "/lovable-uploads/087c3bb9-c5e1-40f3-85a2-0ce076a3f3fa.png", title: "Spillway Operations", category: "Operations", date: "2023-12-15" },
   ];
 
   return (

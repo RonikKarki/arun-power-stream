@@ -97,12 +97,11 @@ const documents = [
   }
 ];
 
-// Mock financial highlights
-const financialHighlights = [
-  { label: "Revenue Growth", value: "25%", icon: TrendingUp, color: "text-accent" },
-  { label: "Total Assets", value: "NPR 8.2B", icon: DollarSign, color: "text-secondary" },
-  { label: "Shareholders", value: "2,500+", icon: Users, color: "text-primary" },
-  { label: "Credit Rating", value: "BBB+", icon: Award, color: "text-accent-light" }
+// Capital structure information
+const capitalStructure = [
+  { label: "Paid Up Capital", value: "Rs 5,00,00,00,000", icon: DollarSign, color: "text-primary" },
+  { label: "Authorized Capital", value: "Rs 3,895,942,100", icon: TrendingUp, color: "text-secondary" },
+  { label: "Issued Capital", value: "Rs 3,895,942,100", icon: Award, color: "text-accent" }
 ];
 
 const categoryColors = {
@@ -114,13 +113,6 @@ const categoryColors = {
   "Corporate Governance": "bg-primary/10 text-primary border-primary/20",
   "Financial Statements": "bg-secondary/10 text-secondary border-secondary/20"
 };
-
-// Capital information
-const capitalInfo = [
-  { label: "Paid Up Capital", value: "Rs 5,00,00,00,000" },
-  { label: "Authorized Capital", value: "Rs 3,895,942,100" },
-  { label: "Issued Capital", value: "Rs 3,895,942,100" }
-];
 
 const formatDate = (dateString: string) => {
   return new Date(dateString).toLocaleDateString('en-US', {
@@ -149,26 +141,9 @@ const Investors = () => {
             </p>
           </div>
 
-          {/* Capital Information */}
-          <Card className="bg-background border-2 mb-12 p-6">
-            <CardHeader className="pb-4">
-              <CardTitle className="text-2xl font-bold text-foreground">Capital Information</CardTitle>
-            </CardHeader>
-            <CardContent className="pt-0">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {capitalInfo.map((item, index) => (
-                  <div key={index} className="text-center">
-                    <div className="text-lg font-semibold text-muted-foreground mb-1">{item.label}</div>
-                    <div className="text-xl font-bold text-foreground">{item.value}</div>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* Financial Highlights */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {financialHighlights.map((item, index) => (
+          {/* Capital Structure */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            {capitalStructure.map((item, index) => (
               <Card key={index} className="text-center p-6 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                 <CardContent className="p-0">
                   <item.icon className={`w-8 h-8 mx-auto mb-3 ${item.color}`} />

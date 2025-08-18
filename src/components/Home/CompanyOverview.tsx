@@ -4,10 +4,10 @@ import powerPlant from "@/assets/power-plant.jpg";
 import riverLandscape from "@/assets/river-landscape.jpg";
 
 const stats = [
-  { icon: Zap, label: "MW Capacity", value: "50+", color: "text-accent" },
-  { icon: Droplets, label: "Projects", value: "5", color: "text-secondary" },
+  { icon: Zap, label: "MW Capacity", value: "63", color: "text-accent" },
+  { icon: Droplets, label: "Projects", value: "2", color: "text-secondary" },
   { icon: Leaf, label: "Years Experience", value: "15+", color: "text-accent-light" },
-  { icon: Award, label: "Awards", value: "12", color: "text-primary-light" },
+  { icon: Award, label: "Listed Company", value: "NEPSE", color: "text-primary-light" },
 ];
 
 const CompanyOverview = () => {

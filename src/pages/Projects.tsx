@@ -7,83 +7,41 @@ import heroDam from "@/assets/hero-dam.jpg";
 import powerPlant from "@/assets/power-plant.jpg";
 import riverLandscape from "@/assets/river-landscape.jpg";
 
-// Mock project data - will be managed from admin panel
+// Company project data
 const projects = [
   {
     id: 1,
-    name: "Arun Kabeli Run-of-River Project",
-    location: "Sankhuwasabha District",
-    capacity: "10.05 MW",
+    name: "KabeliB-1 Hydropower Project",
+    location: "Panchthar and Taplejung District",
+    capacity: "25.0 MW",
     status: "Operational",
-    completionDate: "2021-07-23",
+    completionDate: "2017-04-23",
     image: "/lovable-uploads/27b741df-c255-4090-a87c-36e0ab0a8bad.png",
-    description: "Our flagship run-of-river hydropower project featuring advanced dam infrastructure and modern powerhouse facilities.",
+    description: "Our flagship hydropower project on Kabeli River, featuring run-of-river technology and sustainable energy generation.",
     features: [
-      "Modern spillway and intake system with flood management",
-      "Advanced turbine technology for maximum efficiency", 
-      "Environmental impact mitigation measures",
+      "Run-of-river hydropower technology",
+      "Environmental friendly design with minimal impact", 
+      "Power Purchase Agreement with Nepal Electricity Authority",
       "24/7 automated monitoring and control systems",
-      "Local community development and employment programs"
-    ],
-    beneficiaries: "8,000+ households",
-    investment: "USD 25 Million"
+      "Community participation in equity capital"
+    ]
   },
   {
     id: 2,
-    name: "Powerhouse Infrastructure Development",
+    name: "Kabeli-A Hydropower Project",
     location: "Kabeli River Basin",
-    capacity: "Complete facility",
+    capacity: "37.6 MW",
     status: "Under Construction", 
-    completionDate: "2024-12-30",
+    completionDate: "2025-12-30",
     image: "/lovable-uploads/d97e2b3f-2b03-412e-a574-41d41fa66f85.png",
-    description: "State-of-the-art powerhouse construction with modern facilities and worker accommodation.",
+    description: "Larger capacity project under construction through SPV Company Kabeli Energy Limited, expanding our renewable energy portfolio.",
     features: [
-      "Advanced electrical equipment installation",
-      "Remote monitoring and predictive maintenance systems",
-      "Worker safety and accommodation facilities",
-      "Environmental compliance and monitoring",
-      "Community engagement and skills development"
-    ],
-    beneficiaries: "Construction workforce",
-    investment: "USD 15 Million"
-  },
-  {
-    id: 3,
-    name: "Water Management & Dam Infrastructure",
-    location: "Kabeli River",
-    capacity: "Water regulation",
-    status: "Operational",
-    completionDate: "2021-06-15",
-    image: "/lovable-uploads/8a59dc46-886f-4e0a-b4e8-9eabac76f622.png",
-    description: "Robust concrete dam structure designed for optimal water flow control and environmental sustainability.",
-    features: [
-      "Reinforced concrete dam with spillway system",
-      "Advanced water flow regulation technology",
-      "Sediment management and fish protection",
-      "Downstream environmental flow maintenance", 
-      "Flood control and water resource management"
-    ],
-    beneficiaries: "Downstream communities",
-    investment: "USD 18 Million"
-  },
-  {
-    id: 4,
-    name: "Water Conveyance System",
-    location: "Project corridor",
-    capacity: "Water transport",
-    status: "Operational", 
-    completionDate: "2021-05-10",
-    image: "/lovable-uploads/2a455b33-0392-4bb9-b989-aa31645d7830.png",
-    description: "Efficient water conveyance channel system with concrete lining for optimal water transport.",
-    features: [
-      "Reinforced concrete channel construction",
-      "Optimal gradient design for maximum efficiency",
-      "Minimal water loss through advanced lining",
-      "Easy maintenance access and monitoring",
-      "Environmental integration with natural landscape"
-    ],
-    beneficiaries: "Water system users",
-    investment: "USD 8 Million"
+      "Developed through SPV Company Kabeli Energy Limited",
+      "Advanced turbine and generation technology",
+      "Enhanced environmental protection measures",
+      "Modern transmission and evacuation systems",
+      "Expanded community development programs"
+    ]
   }
 ];
 
@@ -123,33 +81,12 @@ const Projects = () => {
           </div>
 
           {/* Project Statistics */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
-            <Card className="text-center p-6">
+          <div className="flex justify-center mb-12">
+            <Card className="text-center p-8">
               <CardContent className="p-0">
-                <Zap className="w-8 h-8 mx-auto mb-3 text-accent" />
-                <div className="text-2xl font-bold text-foreground mb-1">48 MW</div>
-                <div className="text-sm text-muted-foreground">Total Capacity</div>
-              </CardContent>
-            </Card>
-            <Card className="text-center p-6">
-              <CardContent className="p-0">
-                <Users className="w-8 h-8 mx-auto mb-3 text-secondary" />
-                <div className="text-2xl font-bold text-foreground mb-1">30,000+</div>
-                <div className="text-sm text-muted-foreground">Households Served</div>
-              </CardContent>
-            </Card>
-            <Card className="text-center p-6">
-              <CardContent className="p-0">
-                <MapPin className="w-8 h-8 mx-auto mb-3 text-primary" />
-                <div className="text-2xl font-bold text-foreground mb-1">3</div>
-                <div className="text-sm text-muted-foreground">Districts Covered</div>
-              </CardContent>
-            </Card>
-            <Card className="text-center p-6">
-              <CardContent className="p-0">
-                <CheckCircle className="w-8 h-8 mx-auto mb-3 text-accent-light" />
-                <div className="text-2xl font-bold text-foreground mb-1">USD 69M</div>
-                <div className="text-sm text-muted-foreground">Total Investment</div>
+                <Zap className="w-12 h-12 mx-auto mb-4 text-accent" />
+                <div className="text-4xl font-bold text-foreground mb-2">63 MW</div>
+                <div className="text-lg text-muted-foreground">Total Capacity</div>
               </CardContent>
             </Card>
           </div>
@@ -228,17 +165,6 @@ const Projects = () => {
                           </ul>
                         </div>
 
-                        {/* Project Stats */}
-                        <div className="grid grid-cols-2 gap-4 pt-4 border-t border-border">
-                          <div>
-                            <div className="text-sm text-muted-foreground mb-1">Beneficiaries</div>
-                            <div className="font-semibold text-foreground">{project.beneficiaries}</div>
-                          </div>
-                          <div>
-                            <div className="text-sm text-muted-foreground mb-1">Investment</div>
-                            <div className="font-semibold text-foreground">{project.investment}</div>
-                          </div>
-                        </div>
                       </CardContent>
                     </Card>
                   </div>

@@ -324,12 +324,13 @@ const Investors = () => {
             <p className="text-lg opacity-95 mb-8">
               Our investor relations team is here to help with any questions about our financial performance or investment opportunities.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="secondary" size="lg">
-                Contact Investor Relations
-              </Button>
-              <Button variant="outline" size="lg" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                Schedule a Meeting
+            <div className="flex justify-center">
+              <Button
+                variant="secondary"
+                size="lg"
+                onClick={() => window.location.href = "/contact"}
+              >
+                Contact Us
               </Button>
             </div>
           </div>

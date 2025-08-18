@@ -18,8 +18,10 @@ const CompanyOverview = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             About Arun Kabeli Power Limited
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            A pioneering force in Nepal's renewable energy sector, committed to sustainable hydropower development and environmental stewardship.
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-justify">
+            Arun Valley Hydropower Development Company Limited has developed a (SPV) Special Purpose Vehicle Company "Arun Kabeli Power Limited" to built and operate a 25 MW Kabeli B1 hydropower project in East Nepal. Kabeli B-1 (25 MW) is run-of-river hydropower project located in Kabeli river in Panchthar and Taplejung district. The project was identified and developed by a group of experts from Arun Valley Hydropower Development Company Limited and built by Arun Kabeli Power Limited.
+            <br /><br />
+            The project is generating power since 3rd October, 2019 (B.S 2076.06.16). The power from the project is transmitted through 132 KV single circuit transmission line up to Amarpur substation of NEA. The power is consumed in Eastern Nepal. I am happy to inform that Kabeli B-1 hydropower project is running satisfactorily.
           </p>
         </div>
 

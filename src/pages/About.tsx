@@ -1,7 +1,6 @@
 import Layout from "@/components/Layout/Layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import chairmanImage from "@/assets/chairman.jpg";
 
 // Mock data for board members and management
 const boardMembers = [
@@ -22,25 +21,35 @@ const managementTeam = [
 const About = () => {
   return (
     <Layout>
+      {/* Hero Section */}
+      <section
+        className="relative flex items-center justify-center min-h-[400px] md:min-h-[500px] bg-cover bg-center"
+        style={{
+          backgroundImage: `linear-gradient(rgba(16,23,42,0.65),rgba(16,23,42,0.65)), url('/lovable-uploads/27b741df-c255-4090-a87c-36e0ab0a8bad.png')`
+        }}
+      >
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 drop-shadow-lg">
+            About Us
+          </h1>
+          <p className="text-lg text-white/90 max-w-2xl mx-auto mb-8">
+            Meet our leadership team and learn about our commitment to sustainable energy development.
+          </p>
+        </div>
+        {/* Optional: overlay for darkening the background */}
+        <div className="absolute inset-0 bg-black/40 z-0" />
+      </section>
+
       {/* Chairman's Message */}
       <section className="py-20 bg-gradient-to-b from-background to-muted/30">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-              About Us
-            </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Meet our leadership team and learn about our commitment to sustainable energy development.
-            </p>
-          </div>
-
           <Card className="max-w-6xl mx-auto overflow-hidden shadow-lg">
             <div className="md:flex">
-              <div className="md:w-1/3">
+              <div className="md:w-1/3 flex justify-center items-center">
                 <img 
-                  src={chairmanImage} 
-                  alt="Chairman" 
-                  className="w-full h-64 md:h-full object-cover"
+                  src="/images/Chairman.jpg"
+                  alt="Chairman"
+                  className="w-48 h-48 md:w-64 md:h-64 object-cover rounded-full mx-auto"
                 />
               </div>
               <div className="md:w-2/3 p-8">

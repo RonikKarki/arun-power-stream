@@ -68,27 +68,24 @@ const formatDate = (dateString: string) => {
 const Projects = () => {
   return (
     <Layout>
-      {/* Header */}
-      <section className="py-20 bg-gradient-to-b from-primary/5 to-background">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-              Our Projects
-            </h1>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Discover our portfolio of hydropower projects that are transforming Nepal's energy landscape while preserving environmental integrity.
-            </p>
-          </div>
-
-          {/* Project Statistics */}
-          <div className="flex justify-center mb-12">
-            <Card className="text-center p-8">
-              <CardContent className="p-0">
-                <Zap className="w-12 h-12 mx-auto mb-4 text-accent" />
-                <div className="text-4xl font-bold text-foreground mb-2">63 MW</div>
-                <div className="text-lg text-muted-foreground">Total Capacity</div>
-              </CardContent>
-            </Card>
+      {/* Hero Section */}
+      <section
+        className="relative flex items-center justify-center min-h-[500px] bg-cover bg-center"
+        style={{
+          backgroundImage: `linear-gradient(rgba(16,23,42,0.65),rgba(16,23,42,0.65)), url('/lovable-uploads/27b741df-c255-4090-a87c-36e0ab0a8bad.png')`
+        }}
+      >
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 drop-shadow-lg">
+            Our Projects
+          </h1>
+          <p className="text-lg text-white/90 max-w-3xl mx-auto mb-8">
+            Discover our portfolio of hydropower projects that are transforming Nepal's energy landscape while preserving environmental integrity.
+          </p>
+          <div className="inline-flex items-center gap-4 bg-white/10 rounded-xl px-8 py-4 mx-auto shadow-lg backdrop-blur-md">
+            <Zap className="w-8 h-8 text-accent" />
+            <span className="text-3xl md:text-4xl font-bold text-white">63 MW</span>
+            <span className="text-lg text-white/80 font-medium">Total Capacity</span>
           </div>
         </div>
       </section>
@@ -185,12 +182,13 @@ const Projects = () => {
             <p className="text-lg opacity-95 mb-8">
               Learn more about investment opportunities and partnership possibilities in our upcoming projects.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="secondary" size="lg">
-                Download Project Portfolio
-              </Button>
-              <Button variant="outline" size="lg" className="bg-transparent border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary">
-                Contact Our Team
+            <div className="flex justify-center">
+              <Button
+                variant="secondary"
+                size="lg"
+                onClick={() => window.location.href = "/contact"}
+              >
+                Contact Us
               </Button>
             </div>
           </div>

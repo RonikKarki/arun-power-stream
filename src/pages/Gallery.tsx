@@ -50,13 +50,6 @@ const Gallery = () => {
                     </Badge>
                   </div>
                 </div>
-                <CardContent className="p-4">
-                  <h3 className="font-semibold text-foreground mb-2">{item.title}</h3>
-                  <div className="flex items-center text-sm text-muted-foreground">
-                    <Calendar className="w-4 h-4 mr-2" />
-                    {new Date(item.date).toLocaleDateString()}
-                  </div>
-                </CardContent>
               </Card>
             ))}
           </div>

@@ -15,6 +15,7 @@ const documents = [
     type: "PDF",
     size: "2.5 MB",
     featured: true,
+    documentType: "financial",
     description: "Comprehensive overview of our financial performance, operational achievements, and strategic initiatives for 2023."
   },
   {
@@ -25,6 +26,7 @@ const documents = [
     type: "PDF",
     size: "1.8 MB",
     featured: true,
+    documentType: "financial",
     description: "Third quarter financial highlights showing strong revenue growth and operational efficiency improvements."
   },
   {
@@ -35,6 +37,7 @@ const documents = [
     type: "PDF",
     size: "4.2 MB",
     featured: false,
+    documentType: "other",
     description: "Detailed environmental impact assessment for our upcoming Upper Arun Hydropower Facility."
   },
   {
@@ -45,6 +48,7 @@ const documents = [
     type: "PDF",
     size: "0.8 MB",
     featured: false,
+    documentType: "financial",
     description: "Official notice regarding share allotment for our Initial Public Offering scheduled for 2024."
   },
   {
@@ -55,6 +59,7 @@ const documents = [
     type: "PDF",
     size: "3.1 MB",
     featured: false,
+    documentType: "other",
     description: "Our commitment to environmental stewardship and community development initiatives."
   },
   {
@@ -65,7 +70,30 @@ const documents = [
     type: "PDF",
     size: "0.5 MB",
     featured: false,
+    documentType: "other",
     description: "Minutes from the December 2023 board meeting covering strategic decisions and governance matters."
+  },
+  {
+    id: 7,
+    title: "Audited Financial Statement 2023",
+    category: "Financial Statements",
+    date: "2024-01-20",
+    type: "PDF",
+    size: "1.9 MB",
+    featured: false,
+    documentType: "financial",
+    description: "Comprehensive audited financial statements prepared by certified public accountants."
+  },
+  {
+    id: 8,
+    title: "Cash Flow Statement Q4 2023",
+    category: "Financial Statements",
+    date: "2024-01-18",
+    type: "PDF",
+    size: "1.2 MB",
+    featured: false,
+    documentType: "financial",
+    description: "Detailed cash flow analysis for the fourth quarter of 2023."
   }
 ];
 
@@ -83,8 +111,16 @@ const categoryColors = {
   "Environmental Reports": "bg-accent/10 text-accent border-accent/20",
   "Share Information": "bg-accent-light/10 text-accent-light border-accent-light/20",
   "Sustainability": "bg-accent/10 text-accent border-accent/20",
-  "Corporate Governance": "bg-primary/10 text-primary border-primary/20"
+  "Corporate Governance": "bg-primary/10 text-primary border-primary/20",
+  "Financial Statements": "bg-secondary/10 text-secondary border-secondary/20"
 };
+
+// Capital information
+const capitalInfo = [
+  { label: "Paid Up Capital", value: "Rs 5,00,00,00,000" },
+  { label: "Authorized Capital", value: "Rs 3,895,942,100" },
+  { label: "Issued Capital", value: "Rs 3,895,942,100" }
+];
 
 const formatDate = (dateString: string) => {
   return new Date(dateString).toLocaleDateString('en-US', {
@@ -96,7 +132,8 @@ const formatDate = (dateString: string) => {
 
 const Investors = () => {
   const featuredDocs = documents.filter(doc => doc.featured);
-  const allDocs = documents.slice().sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  const financialDocs = documents.filter(doc => doc.documentType === 'financial').sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  const otherDocs = documents.filter(doc => doc.documentType === 'other').sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   return (
     <Layout>
@@ -111,6 +148,23 @@ const Investors = () => {
               Access comprehensive financial information, reports, and governance documents to make informed investment decisions.
             </p>
           </div>
+
+          {/* Capital Information */}
+          <Card className="bg-background border-2 mb-12 p-6">
+            <CardHeader className="pb-4">
+              <CardTitle className="text-2xl font-bold text-foreground">Capital Information</CardTitle>
+            </CardHeader>
+            <CardContent className="pt-0">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {capitalInfo.map((item, index) => (
+                  <div key={index} className="text-center">
+                    <div className="text-lg font-semibold text-muted-foreground mb-1">{item.label}</div>
+                    <div className="text-xl font-bold text-foreground">{item.value}</div>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
 
           {/* Financial Highlights */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
@@ -184,33 +238,20 @@ const Investors = () => {
         </div>
       </section>
 
-      {/* All Documents */}
+      {/* Financial Documents */}
       <section className="py-20 bg-gradient-to-b from-muted/30 to-background">
         <div className="container mx-auto px-4">
           <div className="mb-12">
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                  All Documents
-                </h2>
-                <p className="text-lg text-muted-foreground">
-                  Complete archive of our financial reports, governance documents, and investor communications.
-                </p>
-              </div>
-              <div className="flex items-center space-x-2 mt-4 md:mt-0">
-                <div className="relative">
-                  <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" />
-                  <Input 
-                    placeholder="Search documents..." 
-                    className="pl-10 w-80"
-                  />
-                </div>
-              </div>
-            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Financial Documents
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Financial reports, statements, and related investment documents.
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {allDocs.map((doc) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+            {financialDocs.map((doc) => (
               <Card key={doc.id} className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                 <CardHeader className="pb-3">
                   <div className="flex items-center justify-between mb-3">
@@ -248,11 +289,52 @@ const Investors = () => {
             ))}
           </div>
 
-          {/* Load More Button */}
-          <div className="text-center mt-12">
-            <Button variant="outline" size="lg">
-              Load More Documents
-            </Button>
+          <div className="mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Other Documents
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Corporate governance, environmental reports, and other important documents.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {otherDocs.map((doc) => (
+              <Card key={doc.id} className="group hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+                <CardHeader className="pb-3">
+                  <div className="flex items-center justify-between mb-3">
+                    <Badge className={categoryColors[doc.category as keyof typeof categoryColors]}>
+                      {doc.category}
+                    </Badge>
+                    <span className="text-xs text-muted-foreground">{formatDate(doc.date)}</span>
+                  </div>
+                  <CardTitle className="text-lg leading-tight group-hover:text-primary transition-colors">
+                    {doc.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="pt-0">
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-4 line-clamp-2">
+                    {doc.description}
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-2 text-xs text-muted-foreground">
+                      <FileText className="w-3 h-3" />
+                      <span>{doc.type}</span>
+                      <span>•</span>
+                      <span>{doc.size}</span>
+                    </div>
+                    <div className="flex space-x-1">
+                      <Button variant="ghost" size="sm" className="h-8 w-8 p-0">
+                        👁️
+                      </Button>
+                      <Button variant="ghost" size="sm" className="h-8 w-8 p-0 group">
+                        <Download className="w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
+                      </Button>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>

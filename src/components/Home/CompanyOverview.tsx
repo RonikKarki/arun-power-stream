@@ -29,12 +29,21 @@ const CompanyOverview = () => {
             <h3 className="text-2xl md:text-3xl font-bold text-foreground">
               Leading Nepal's Energy Transformation
             </h3>
-            <p className="text-muted-foreground leading-relaxed">
-              Since our establishment, Arun Kabeli Power Limited has been at the forefront of Nepal's hydropower development. We specialize in designing, constructing, and operating sustainable hydropower facilities that contribute to the nation's energy security while maintaining environmental harmony.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              Our commitment extends beyond power generation. We actively engage with local communities, promote environmental conservation, and support sustainable development practices that benefit all stakeholders.
-            </p>
+            <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <h4 className="text-lg font-semibold text-foreground">Overview of Hydro Project</h4>
+              <p>
+                After the completion of Piluwakhola Hydropower Project in 2001, Arun Valley Hydropower Development Company Limited started feasibility study of Ridi Hydropower project (2400 kW) in Gulmi district and established a company named Ridi Hydropower Development Company Limited to develop the project. After that Arun Valley Hydropower Development Company Limited started feasibility study of Kabeli B1 project on Kabeli River.
+              </p>
+              <p>
+                It is located in between Panchthar and Taplejung district of Mechi Zone in Eastern Development Region of Nepal. To develop this project, Arun Valley Hydropower Development Company Limited established one company named Arun Kabeli Power Limited on 7th January, 2011 as a subsidiary company.
+              </p>
+              <p>
+                The company has signed a connection agreement with Nepal Electricity Authority (NEA), Grid Department on 29th May, 2012 for the power evacuation from this project and signed Power Purchase Agreement (PPA) with NEA on 13th July, 2012. According to PPA, power purchase rate per kW is Rs.4.80 for wet months and Rs.8.40 for dry months.
+              </p>
+              <p>
+                The company has its policy of wider people participation in the equity capital and makes profit from the investment. In this model, small capital collection can help to build mega project. Now people are highly interested to invest in promoter equity capital in hydropower projects.
+              </p>
+            </div>
             
             {/* Stats Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-6">

@@ -118,6 +118,66 @@ const About = () => {
         </div>
       </section>
 
+      {/* Company History */}
+      <section className="py-20 bg-gradient-to-b from-background to-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              Company History
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Our journey from inception to becoming a leading hydropower developer in Nepal.
+            </p>
+          </div>
+
+          <div className="max-w-6xl mx-auto">
+            <Card className="p-8 mb-8">
+              <CardContent className="p-0">
+                <div className="space-y-6 text-muted-foreground leading-relaxed">
+                  <div>
+                    <h3 className="text-xl font-semibold text-foreground mb-4">Overview of Hydro Project</h3>
+                    <p>
+                      After the completion of Piluwakhola Hydropower Project in 2001, Arun Valley Hydropower Development Company Limited started feasibility study of Ridi Hydropower project (2400 kW) in Gulmi district and established a company named Ridi Hydropower Development Company Limited to develop the project. After that Arun Valley Hydropower Development Company Limited started feasibility study of Kabeli B1 project on Kabeli River.
+                    </p>
+                  </div>
+                  
+                  <p>
+                    It is located in between Panchthar and Taplejung district of Mechi Zone in Eastern Development Region of Nepal. To develop this project, Arun Valley Hydropower Development Company Limited established one company named Arun Kabeli Power Limited on 7th January, 2011 as a subsidiary company.
+                  </p>
+                  
+                  <p>
+                    The company has signed a connection agreement with Nepal Electricity Authority (NEA), Grid Department on 29th May, 2012 for the power evacuation from this project and signed Power Purchase Agreement (PPA) with NEA on 13th July, 2012. According to PPA, power purchase rate per kW is Rs.4.80 for wet months and Rs.8.40 for dry months. For this purpose, months from January to April are considered as dry months and rest as wet months.
+                  </p>
+                  
+                  <p>
+                    Electricity Generation License has been achieved on 12th July, 2013 from Ministry of Energy. Similarly, all permissions and licenses from related governing body were achieved during the fiscal year 2070/71 B.S. Required Commercial Operation Date (RCOD) of this project has been fixed for 23rd April, 2017. However, due to uncompletion of Transmission Line work by Nepal Government, the company has applied for revised RCOD.
+                  </p>
+                  
+                  <p>
+                    After the completion of this project, the power generated from this project shall be evacuated from Mechi Koridor 132 kV transmission line from Damak to Amarpur in Panchthar district. The company has its policy of wider people participation in the equity capital and makes profit from the investment. In this model, small capital collection can help to build mega project.
+                  </p>
+                  
+                  <div>
+                    <h4 className="text-lg font-semibold text-foreground mb-3">Public Participation & Investment</h4>
+                    <p>
+                      70% of paid of capital was paid from promotor shareholders and remaining 30% (i.e. Rs. 450 millions) has been issued to public Shareholders. Out of this 10% (i.e. Rs. 150 millions) was provisioned to public of project affected area and remaining Rs. 300 millions to General Public (including staffs of the company and mutual fund).
+                    </p>
+                  </div>
+                  
+                  <p>
+                    The total 15 million shares (par value NPR 100 per share) of the company has been listed in Nepal Stock Exchange on 25 Chaitra 2073 and trading has been started on 03 Baishakh 2074 in the share market.
+                  </p>
+                  
+                  <p>
+                    Total investment of the company is made from equity and bank loan. Upon the repayment of the bank loan, the company shall issue bonus share and increase value of the investment. This is the beauty of investment in hydropower projects. According to projection, in the first year of commercial operation, it will be able to earn Rs.762.80 million. With considering the annual increment by 3%, income of 5th year will reach to Rs. 871.9 million.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Management Team */}
       <section className="py-20 bg-gradient-to-b from-muted/30 to-background">
         <div className="container mx-auto px-4">

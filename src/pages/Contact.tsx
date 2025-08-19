@@ -1,11 +1,40 @@
+import React, { useState } from "react";
 import Layout from "@/components/Layout/Layout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { API_BASE_URL } from "@/lib/api";
 
 const Contact = () => {
+  const [form, setForm] = useState({
+    first_name: "",
+    last_name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const [success, setSuccess] = useState(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setSuccess(false);
+    const res = await fetch(`${API_BASE_URL}/contact/`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(form),
+    });
+    if (res.ok) {
+      setSuccess(true);
+      setForm({ first_name: "", last_name: "", email: "", subject: "", message: "" });
+    }
+  };
+
   return (
     <Layout>
       <section className="py-20">
@@ -24,14 +53,53 @@ const Contact = () => {
                 <CardTitle>Send us a Message</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <Input placeholder="First Name" />
-                  <Input placeholder="Last Name" />
-                </div>
-                <Input placeholder="Email Address" type="email" />
-                <Input placeholder="Subject" />
-                <Textarea placeholder="Your Message" rows={6} />
-                <Button className="w-full">Send Message</Button>
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <Input
+                      placeholder="First Name"
+                      name="first_name"
+                      value={form.first_name}
+                      onChange={handleChange}
+                      required
+                    />
+                    <Input
+                      placeholder="Last Name"
+                      name="last_name"
+                      value={form.last_name}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+                  <Input
+                    placeholder="Email Address"
+                    type="email"
+                    name="email"
+                    value={form.email}
+                    onChange={handleChange}
+                    required
+                  />
+                  <Input
+                    placeholder="Subject"
+                    name="subject"
+                    value={form.subject}
+                    onChange={handleChange}
+                    required
+                  />
+                  <Textarea
+                    placeholder="Your Message"
+                    name="message"
+                    rows={6}
+                    value={form.message}
+                    onChange={handleChange}
+                    required
+                  />
+                  <Button className="w-full" type="submit">Send Message</Button>
+                  {success && (
+                    <div className="text-green-600 text-center mt-2">
+                      Thank you for contacting us! We will get back to you soon.
+                    </div>
+                  )}
+                </form>
               </CardContent>
             </Card>
 
@@ -88,16 +156,19 @@ const Contact = () => {
                 </CardContent>
               </Card>
 
-              {/* Map Placeholder */}
+              {/* Map Location */}
               <Card>
                 <CardContent className="p-0">
-                  <div className="w-full h-64 bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center">
-                    <div className="text-center text-muted-foreground">
-                      <MapPin className="w-12 h-12 mx-auto mb-2" />
-                      <p>Interactive Map Location</p>
-                      <p className="text-sm">Kathmandu Office</p>
-                    </div>
-                  </div>
+                  <iframe
+                    title="Arun Kabeli Power Office Location"
+                    src="https://www.google.com/maps?q=Trade+Tower,+Thapathali,+Kathmandu&output=embed"
+                    width="100%"
+                    height="256"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
                 </CardContent>
               </Card>
             </div>

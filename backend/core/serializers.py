@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import GalleryImage, Document, ContactMessage
+from .models import GalleryImage, Document, ContactMessage, Notice
 
 class GalleryImageSerializer(serializers.ModelSerializer):
     class Meta:
@@ -14,4 +14,9 @@ class DocumentSerializer(serializers.ModelSerializer):
 class ContactMessageSerializer(serializers.ModelSerializer):
     class Meta:
         model = ContactMessage
+        fields = '__all__'
+
+class NoticeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Notice
         fields = '__all__'

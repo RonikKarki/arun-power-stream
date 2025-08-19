@@ -34,3 +34,17 @@ class ContactMessage(models.Model):
 
     def __str__(self):
         return f"{self.first_name} {self.last_name} - {self.subject}"
+
+class Notice(models.Model):
+    NOTICE_TYPE_CHOICES = (
+        ('image', 'Image'),
+        ('pdf', 'PDF'),
+    )
+    title = models.CharField(max_length=255)
+    file = models.FileField(upload_to='notices/')
+    notice_type = models.CharField(max_length=10, choices=NOTICE_TYPE_CHOICES)
+    show = models.BooleanField(default=True)
+    uploaded_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.title

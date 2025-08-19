@@ -2,8 +2,9 @@ from django.shortcuts import render
 from rest_framework import generics
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from .models import GalleryImage, Document, ContactMessage
-from .serializers import GalleryImageSerializer, DocumentSerializer, ContactMessageSerializer
+from .models import GalleryImage, Document, ContactMessage, Notice
+from .serializers import GalleryImageSerializer, DocumentSerializer, ContactMessageSerializer, NoticeSerializer
+from rest_framework.generics import ListAPIView
 
 class GalleryImageList(generics.ListAPIView):
     queryset = GalleryImage.objects.order_by('-uploaded_at')
@@ -28,3 +29,9 @@ class LatestDocuments(APIView):
 class ContactMessageCreate(generics.CreateAPIView):
     queryset = ContactMessage.objects.all()
     serializer_class = ContactMessageSerializer
+
+class ActiveNoticeView(ListAPIView):
+    serializer_class = NoticeSerializer
+
+    def get_queryset(self):
+        return Notice.objects.filter(show=True).order_by('-uploaded_at')[:1]
